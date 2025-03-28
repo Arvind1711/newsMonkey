@@ -1,0 +1,46 @@
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 16px;
+  
+  
+}
+/* to make sure that all the cards includes the padding and border to calculate the width of the card */
+.article-container > div {  
+  box-sizing: border-box;
+} 
+.card {
+  border: solid rgb(132, 125, 125);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  max-height: 350px;
+  overflow: hidden;
+ }
+
+.card img {
+  max-height: 150px; 
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+}
+.card h5 {
+  margin-top: 1px;
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
+  white-space: normal; /* Allow text to wrap to the next line */
+}
+
+.card p.content {
+  overflow: hidden; /* Hide overflow content */
+  display: -webkit-box; /* Required for truncating text */
+  -webkit-line-clamp: 40; /* Number of lines to show */
+  -webkit-box-orient: vertical; /* Required for truncating text */
+}
+.card p {
+  margin-top: 1px;
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
+  white-space: normal; /* Allow text to wrap to the next line */
+  font-size: small;
+}
